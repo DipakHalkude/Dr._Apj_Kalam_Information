@@ -7,7 +7,7 @@
     <script src="https://cdn.suprsend.com/sdk/latest/suprsend.min.js"></script>
     <script>
         // Initialize SuprSend
-        const suprsend = new SuprSend('s0e1sOuxDkXA6VyoGozA', 'SS.WSS.bLPbaDtQfZ4IKaEiaVv-DScr0B4AbLz9001YXuCJ');
+        const suprsend = new SuprSend('YOUR_WORKSPACE_KEY', 'YOUR_WORKSPACE_SECRET');
         
         // Render the inbox
         document.addEventListener("DOMContentLoaded", function() {
@@ -105,6 +105,11 @@
                         then covered in the Indian National flag and brought to his hometown. About 35000 people
                         attended his funeral event and prayed for such a great soul.</p>
                 </section>
+                <form id="myForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <button type="submit">Submit</button>
+                </form>
                 <div id="suprsend-inbox"></div>
                 <p id="para1">If you have time, you should read more about this incredible human being on his <a
                         id="tribute-link" href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank">
