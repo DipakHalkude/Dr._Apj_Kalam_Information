@@ -9,6 +9,9 @@
     // Initialize SuprSend
     const suprsend = new SuprSend('s0e1sOuxDkXA6VyoGozA', 'SS.WSS.bLPbaDtQfZ4IKaEiaVv-DScr0B4AbLz9001YXuCJ');
     </script>
+    <script>
+        suprsend.inbox.renderInbox('suprsend-inbox');
+    </script>
 </head>
 
 <body>
@@ -35,7 +38,6 @@
                         living. At a tender age, Kalam had to sell newspapers to supplement his family income.</p>
                         <hr>
                         <hr>
-                    <hr>
                     <h2 id="h2">Dr. A P J Abdul Kalam's Biography - Educational Background of Kalam </h2>
                     <p id="para">Although Kalam had average grades in school, he was very hard working and had an
                         immense desire to learn. He spent a lot of time studying and had developed a particular interest
@@ -45,7 +47,6 @@
                         of Technology.</p>
                         <hr>
                         <hr>
-                    <hr>
                     <h2 id="h2">Dr. A P J Abdul Kalam's Biography - Kalam as a Scientist </h2>
                     <p id="para">Kalam joined as a scientist in the aeronautical development establishment of DRDO in
                         1960, after graduation. His career started with him designing a small hovercraft. However, he
@@ -57,11 +58,8 @@
                         successful SLV program's technology Kalam somehow convinced Indira Gandhi and sought secret
                         funds for these aerospace projects. His research and immense knowledge brought him and the
                         nation great laurels in the 1980s.</p>
- 
                         <hr>
                         <hr>
-
-                    <hr>
                     <h2 id="h2">Dr. A P J Abdul Kalam's Biography -Kalam as the 11th President of India </h2>
                     <p id="para">Sir Kalam was entitled to be the 11th president of India. His term period of 25th July
                         2002 to 25th July 2007 was achieved by winning a presidential election in 2002 with a massive
@@ -78,12 +76,8 @@
                         some kind of provision with or who is taking a pension from the prince has the right to work for
                         the of the “House of Commons”. This will allow the royal family to have zero influence on the
                         administrative conditions.</p>
-
                         <hr>   
                         <hr>   
-
-                    <hr>
-
                     <h2 id="h2">Dr. A P J Abdul Kalam's Biography - The Demise of Abdul Kalam </h2>
                     <p id="para">Abdul Kalam was a mortal human being just like us, but for his contribution to the
                         country he remained immortal in the hearts of people. Dr. APJ Abdul Kalam was one such
@@ -99,24 +93,34 @@
                         attended his funeral event and prayed for such a great soul.</p>
 
                 </section>
-
-
                 <div id="suprsend-inbox"></div>
-
                 <p id="para1">If you have time, you should read more about this incredible human being on his <a id="tribute-link" href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank"> Wikipedia entry. </a></p>
             </div>
         </div>
     </main>
     <footer id="footer"> Copyright © 2023 Dipak Halkude. All rights reserved.</footer>
 
-</body>
+    <!-- Add a form to submit test events -->
+    <form id="testForm">
+        <input type="text" name="username" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
 
-</html>
-
-
+    <!-- Add JavaScript to handle form submission and send event to SuprSend -->
     <script>
-        // Render the SuprSend inbox
-        suprsend.inbox.renderInbox('suprsend-inbox');
+        document.getElementById('testForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const username = event.target.username.value;
+
+            // Send event to SuprSend
+            suprsend.track('Form Submitted', {
+                name: username,
+                timestamp: new Date().toISOString()
+            });
+
+            alert('Form submitted and event sent to SuprSend');
+        });
     </script>
 </body>
 
