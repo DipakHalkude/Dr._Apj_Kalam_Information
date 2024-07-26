@@ -6,27 +6,35 @@
     <link href="styles.css" rel="stylesheet">
     <script src="https://cdn.suprsend.com/sdk/latest/suprsend.min.js"></script>
     <script>
-        // Initialize SuprSend
-        const suprsend = new SuprSend('s0e1sOuxDkXA6VyoGozA', 'SS.WSS.bLPbaDtQfZ4IKaEiaVv-DScr0B4AbLz9001YXuCJ');
-        
-        // Render the inbox
-        document.addEventListener("DOMContentLoaded", function() {
+        // Function to initialize SuprSend
+        function initializeSuprSend() {
+            if (typeof SuprSend === 'undefined') {
+                console.error('SuprSend is not loaded');
+                return;
+            }
+
+            const suprsend = new SuprSend('s0e1sOuxDkXA6VyoGozA', 'SS.WSS.bLPbaDtQfZ4IKaEiaVv-DScr0B4AbLz9001YXuCJ');
+            
+            // Render the inbox
             suprsend.inbox.renderInbox('suprsend-inbox');
-        });
 
-        function sendEvent(eventData) {
-            suprsend.track('Form Submitted', eventData);
-        }
-
-        // Add event listener to the form
-        document.addEventListener("DOMContentLoaded", function() {
+            // Add event listener to the form
             const form = document.getElementById('myForm');
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
                 const username = document.getElementById('username').value;
-                sendEvent({ username: username });
+                suprsend.track('Form Submitted', { username: username });
                 alert('Form submitted and event sent to SuprSend');
             });
+        }
+
+        // Initialize SuprSend when the script is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const script = document.querySelector('script[src="https://cdn.suprsend.com/sdk/latest/suprsend.min.js"]');
+            script.onload = initializeSuprSend;
+            script.onerror = function() {
+                console.error('Failed to load SuprSend script');
+            };
         });
     </script>
 </head>
