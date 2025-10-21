@@ -27,7 +27,6 @@ The project utilizes the following technologies:
 
 - HTML5
 - CSS3 (including Flexbox or Grid for layout)
-- JavaScript (for interactivity)
 
 ## Installation
 
