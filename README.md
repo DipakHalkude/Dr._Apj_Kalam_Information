@@ -10,7 +10,6 @@ This project is a simple webpage that provides information about Dr. APJ Abdul K
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
