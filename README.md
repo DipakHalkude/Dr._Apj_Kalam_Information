@@ -1,6 +1,6 @@
 # Dr. APJ Abdul Kalam - Year-wise Information
 
-This project is a simple webpage that provides information about Dr. APJ Abdul Kalam, organized year-wise. It is built using HTML, CSS, and JavaScript.
+This project is a simple webpage that provides information about Dr. APJ Abdul Kalam, organized year-wise. It is built using HTML, CSS.
 
 ## Table of Contents
 
