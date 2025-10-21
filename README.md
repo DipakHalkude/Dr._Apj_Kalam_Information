@@ -42,10 +42,6 @@ The project utilizes the following technologies:
 
 Contributions to this project are welcome. If you have additional information to add or improvements to make, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 Thank you for visiting the Dr. APJ Abdul Kalam - Year-wise Information webpage! We hope you find the insights into his life informative and inspiring. If you have any feedback or suggestions for enhancing the webpage, feel free to reach out. Celebrate the life of this great visionary!
