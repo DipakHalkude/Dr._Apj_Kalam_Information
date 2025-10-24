@@ -25,7 +25,7 @@ The Dr. APJ Abdul Kalam - Year-wise Information webpage presents an overview of 
 The project utilizes the following technologies:
 
 - HTML5
-- CSS3 (including Flexbox And Grid Layout)
+- CSS3 (Including Flexbox And Grid Layout)
 
 ## Installation
 
